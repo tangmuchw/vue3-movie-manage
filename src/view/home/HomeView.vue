@@ -29,7 +29,7 @@
             <el-menu-item index="FilmView">影片信息管理</el-menu-item> 
            <el-menu-item index="FilmScheduleView">排期信息管理</el-menu-item> 
          </el-submenu> 
-         <el-submenu index="order-menu" disabled	>
+         <el-submenu index="order-menu">
             <template slot="title">
               <i class="el-icon-location"></i>
               <span>我的用户</span>
@@ -37,7 +37,7 @@
             <el-menu-item index="OrderView">订单信息管理</el-menu-item>
             <el-menu-item index="UserView">用户信息查看</el-menu-item>
           </el-submenu>
-          <el-submenu index="admin-menu" disabled	>
+          <el-submenu index="admin-menu">
             <template slot="title">
               <i class="el-icon-edit"></i>
               <span>管理员</span>
@@ -47,7 +47,7 @@
         </el-menu>
       </el-aside>
       <el-container class="right-container">
-       头部导航 
+       <!-- 头部导航  -->
         <el-header class="header-bar">
           <el-dropdown trigger="click" @command="handleCommandHeader">
             <span class="el-dropdown-link admin-nick-name">
@@ -61,7 +61,7 @@
           </el-dropdown>
         </el-header>
         <el-main class="main">
-         面包屑导航 
+         <!-- 面包屑导航  -->
           <el-breadcrumb class="bread-crumb" separator-class="el-icon-arrow-right">
             <el-breadcrumb-item v-for="(item, breadIndex) in breadCrumb" :key="breadIndex">{{item}}</el-breadcrumb-item>
           </el-breadcrumb>

@@ -73,8 +73,8 @@
             let loginForm = _this.loginForm
             let adminId = loginForm.username
             let password = loginForm.password
-            // let mdPwd =md5(password)
-            this.$api.login(adminId, password).then(res => {
+            let mdPwd =md5(password)
+            this.$api.login(adminId, mdPwd).then(res => {
               console.log(res)
               // _this.tableData = data
               // saveTemp = data
